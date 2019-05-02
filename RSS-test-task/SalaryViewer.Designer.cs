@@ -117,11 +117,11 @@
             // 
             this.labelCC.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.labelCC.AutoSize = true;
-            this.labelCC.Location = new System.Drawing.Point(211, 445);
+            this.labelCC.Location = new System.Drawing.Point(221, 445);
             this.labelCC.Name = "labelCC";
-            this.labelCC.Size = new System.Drawing.Size(77, 14);
+            this.labelCC.Size = new System.Drawing.Size(64, 14);
             this.labelCC.TabIndex = 10;
-            this.labelCC.Text = " CC BY NC 4.0";
+            this.labelCC.Text = "MIT License";
             this.labelCC.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // dataGridViewFinal
