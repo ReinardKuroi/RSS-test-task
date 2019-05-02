@@ -64,7 +64,7 @@ StyleCopReport.xml
 *.obj
 *.iobj
 *.pch
-*.pdb
+#*.pdb
 *.ipdb
 *.pgc
 *.pgd
@@ -242,8 +242,8 @@ ServiceFabricBackup/
 *.rptproj.bak
 
 # SQL Server files
-*.mdf
-*.ldf
+#*.mdf
+#*.ldf
 *.ndf
 
 # Business Intelligence projects
