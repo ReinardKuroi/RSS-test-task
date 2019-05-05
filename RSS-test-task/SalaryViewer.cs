@@ -69,6 +69,9 @@ namespace RSS_test_task
             showDismissed = checkBoxInactive.Checked;
             using (var context = new RSSEntities())
             {
+                /*
+                 * Old code, managed to shorted the query quite a bit
+                 * 
                 var getEmployees = from e in context.Employees
                                    where (e.Active == true || e.Active == !showDismissed) && e.Name.Contains(searchString)
                                    select new
@@ -92,6 +95,17 @@ namespace RSS_test_task
                             {
                                 e.Name,
                                 Salary = ew == null ? 0 : ew.Salary
+                            };
+                            */
+                            
+                var query = from e in context.Employees
+                            where ((e.Active == true || e.Active == !showDismissed) && e.Name.Contains(searchString))
+                            let ws = e.Wages.Where(x => x.Datetime.Month == DateTime.Now.Month).DefaultIfEmpty()
+                            from w in ws
+                            select new
+                            {
+                                e.Name,
+                                Salary =  w == null ? 0 : w.Salary
                             };
 
                 var result = from q in query
